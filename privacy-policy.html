@@ -25,18 +25,18 @@ footer{margin-top:3em;color:var(--muted);font-size:.9em}
 <body>
 <main>
 <h1>TuneLab Tuner Privacy Policy</h1>
-<p><strong>Effective date:</strong> October 26, 2026
+<p><strong>Effective date:</strong> October 27, 2026
 <strong>App:</strong> TuneLab Tuner for iPhone (bundle ID <code>com.hydesign.tunelab</code>)
 <strong>Developer:</strong> Alex Hylton, doing business as HY Design ("we", "us")
 <strong>Contact:</strong> <a href="mailto:tunelabtuner@gmail.com">tunelabtuner@gmail.com</a></p>
-<p>TuneLab Tuner is an instrument tuner and tuning library. We built it to work on your device. This policy explains, in plain language, what the app uses, what stays on your iPhone, and the one optional feature that sends data off it.</p>
+<p>TuneLab Tuner is an instrument tuner and tuning library. We built it to work on your device. This policy explains, in plain language, what the app uses, what stays on your iPhone, and the optional TuneLab Pro features that send data off it.</p>
 <h2>The short version</h2>
 <ul>
 <li><strong>No account.</strong> You don't sign up or log in, and we don't ask for your name, email or phone number.</li>
 <li><strong>No ads, no analytics, no tracking.</strong> The app has no advertising, analytics, crash-reporting or tracking SDKs, and we don't track you across other companies' apps or websites.</li>
 <li><strong>Microphone audio stays on your device.</strong> It is analyzed live to find the pitch. It is never recorded, saved or uploaded.</li>
 <li><strong>Your library stays on your device.</strong> Tunings, favorites, instrument profiles and settings are stored locally on your iPhone.</li>
-<li><strong>One optional feature goes online:</strong> the AI tuning assistant, for TuneLab Pro members. It sends data only when you turn on its consent switch and tap to send a request. Details are below.</li>
+<li><strong>Two things go online, both tied to TuneLab Pro:</strong> TuneLab AI, which sends data only when you turn on its consent switch and tap to send a request, and, if you accept a special subscription offer, a request to our server to sign that offer. Details are below.</li>
 </ul>
 <h2>Microphone</h2>
 <p>TuneLab asks for microphone access so it can hear your instrument and measure its pitch. The audio is processed in memory on your device, in real time, and then discarded. TuneLab does not record audio, save audio files or send audio anywhere, including to us or to the AI feature.</p>
@@ -54,35 +54,40 @@ footer{margin-top:3em;color:var(--muted);font-size:.9em}
 <p>When you use Share or Export, the tuning text or file goes wherever you send it, for example Messages, Mail or Files. What happens next is between you and that app or recipient.</p>
 <h2>Purchases (TuneLab Pro)</h2>
 <p>TuneLab Pro is sold through Apple's App Store as a monthly or yearly subscription or a one-time lifetime purchase. <strong>Apple handles all payments.</strong> We never see your card details, Apple Account email or billing address. The app uses Apple's StoreKit to check whether you have Pro and to restore purchases. Apple's handling of your purchase information is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
-<h2>Optional AI tuning assistant (TuneLab Pro)</h2>
-<p>TuneLab Pro includes an optional AI assistant that suggests tunings from a description you type. <strong>It's the only part of TuneLab that sends data off your device.</strong> It sends nothing unless you are a Pro member, turn on the switch labeled "Send these notes and my description to Pickaxe", and tap to send a request.</p>
+<h2>Optional TuneLab AI (TuneLab Pro)</h2>
+<p>TuneLab Pro includes TuneLab AI, an optional assistant that suggests tunings from a description you type and answers questions about the tuning you're on. It sends nothing unless you are a Pro member, turn on the switch labeled "Send notes, my words and my playing answers to TuneLab AI", and tap to send a request. Theory Mutate and "How it sounds" run entirely on your device and never send anything.</p>
 <p><strong>What's sent when you make a request:</strong></p>
 <ul>
 <li>the notes of the tuning you're working with (for example, a list of pitches)</li>
-<li>the text you type to describe what you want (up to 800 characters)</li>
-<li>the type of request (generate, mutate or analyze)</li>
+<li>the text you type, either a description of what you want or a question about the tuning (up to 800 characters)</li>
+<li>the type of request (generate, mutate, analyze or ask), the direction you picked (for example Darker or Drone) and how many ideas to return</li>
+<li>your playing answers from setup, if you gave them: up to three favorite genres, your playing level and your music-theory level. These help TuneLab AI pitch its explanations at the right level. You can change them in Settings › Your playing.</li>
 <li>Apple's signed proof of your TuneLab Pro purchase, so our server can confirm you're a Pro member</li>
 </ul>
 <p><strong>Where it goes:</strong></p>
 <ol>
-<li><strong>Our server.</strong> The request goes over an encrypted connection to the TuneLab server, hosted by Render. To confirm your Pro membership, the server sends your purchase's transaction ID and product ID to Apple for verification. It then turns your purchase into a scrambled (one-way hashed) identifier, used to enforce the daily request limit. The server keeps only a daily count of requests per hashed identifier. It doesn't store your notes, description or purchase proof.<p><strong>IP address.</strong> Like any internet service, our server receives your device's IP address with each request. It uses the IP address briefly in memory to limit how many requests can be made, and doesn't save it. Our hosting provider, Render, may record IP addresses in its standard connection and security logs, under <a href="https://render.com/privacy">Render's privacy policy</a>.</p></li>
-<li><strong>Pickaxe.</strong> To generate the suggestion, the server sends your notes, your description and the hashed identifier to our AI provider, Pickaxe. Pickaxe never receives your microphone audio or your Apple purchase proof. Pickaxe processes the request to return a suggestion. Pickaxe may keep request data under its own terms and <a href="https://pickaxe.co/privacy">privacy policy</a>, which we don't control.</li>
+<li><strong>Our server.</strong> The request goes over an encrypted connection to the TuneLab server, hosted by Render. To confirm your Pro membership, the server sends your purchase's transaction ID and product ID to Apple for verification. It then turns your purchase into a scrambled (one-way hashed) identifier, used to enforce your AI allowance (a daily limit and a monthly limit). The server keeps only the current day's and current month's request counts per hashed identifier (days and months are counted in UTC). It doesn't store your notes, text, playing answers or purchase proof.<p><strong>IP address.</strong> Like any internet service, our server receives your device's IP address with each request. It uses the IP address briefly in memory to limit how many requests can be made, and doesn't save it. Our hosting provider, Render, may record IP addresses in its standard connection and security logs, under <a href="https://render.com/privacy">Render's privacy policy</a>.</p></li>
+<li><strong>Pickaxe.</strong> To generate the suggestion or answer, the server sends your notes, music facts it calculates from them (such as intervals and note names), your text, the request type and direction, your playing answers (if any) and the hashed identifier to our AI provider, Pickaxe. Pickaxe never receives your microphone audio or your Apple purchase proof. Pickaxe processes the request to return a suggestion. Pickaxe may keep request data under its own terms and <a href="https://pickaxe.co/privacy">privacy policy</a>, which we don't control.</li>
 </ol>
-<p><strong>Please don't type personal information</strong> such as names, contact details or anything sensitive into the AI description box. It is meant only for describing music.</p>
-<p>If you don't use the AI assistant, none of this happens. You can turn the consent switch off at any time.</p>
+<p><strong>Please don't type personal information</strong> such as names, contact details or anything sensitive into the TuneLab AI text box. It is meant only for describing music or asking about it.</p>
+<p>If you don't use TuneLab AI, none of this happens. You can turn the consent switch off at any time.</p>
+<h3>Special subscription offers</h3>
+<p>When you buy Pro, the app attaches a random ID that it creates on your device (an "app account token") to the purchase, which Apple stores with the transaction. It isn't your name, email or Apple Account. If the app shows you a special offer on the yearly plan and you choose to accept it, the app sends that random ID, the product and the offer name to the TuneLab server, which signs the offer so Apple will accept it. The server doesn't store this request. Apple then decides whether you're eligible.</p>
+<h3>Notifications</h3>
+<p>When you start a free trial, TuneLab schedules a reminder on your device before the trial ends. You can turn this off in Settings with "Remind me before a free trial ends". iOS asks for notification permission first. The reminder is created on your iPhone; nothing is sent to us.</p>
 <h2>What we don't do</h2>
 <ul>
 <li>We don't sell or rent your data.</li>
 <li>We don't use your data for advertising, and we don't share it with data brokers.</li>
 <li>We don't track you across other companies' apps or websites.</li>
-<li>We don't build a profile of you.</li>
+<li>We don't build a profile of you for advertising or tracking. Your playing answers stay on your device unless you send them with a TuneLab AI request, and our server doesn't keep them.</li>
 </ul>
 <h2>Children</h2>
 <p>TuneLab is a general-audience music tool and is not directed at children under 13. We don't knowingly collect personal information from children. The app has no accounts, and the core tuner works entirely on the device. If you believe a child has sent personal information through the AI feature, email us and we'll help remove whatever we can.</p>
 <h2>Deleting your data</h2>
-<p>Your library and settings live on your device. Delete individual tunings in the app, or <strong>delete the TuneLab app to remove all of its data from your device.</strong> Copies may remain in your existing device backups until those backups are replaced or deleted. If you used the AI assistant, the TuneLab server keeps only daily request counts, which are replaced each day. For any other question about your data, email <a href="mailto:tunelabtuner@gmail.com">tunelabtuner@gmail.com</a>.</p>
+<p>Your library and settings live on your device. Delete individual tunings in the app, or <strong>delete the TuneLab app to remove all of its data from your device.</strong> Copies may remain in your existing device backups until those backups are replaced or deleted. If you used TuneLab AI, the TuneLab server keeps only your request counts for the current UTC day and month, which are cleared when the day or month changes. Deleting the app also deletes the random app account ID it created. For any other question about your data, email <a href="mailto:tunelabtuner@gmail.com">tunelabtuner@gmail.com</a>.</p>
 <h2>Security</h2>
-<p>On-device data is protected by iOS's built-in security. AI requests travel over encrypted HTTPS connections. No method of storage or transmission is perfectly secure, but we keep what leaves your device to the minimum the feature needs.</p>
+<p>On-device data is protected by iOS's built-in security. AI and offer requests travel over encrypted HTTPS connections. No method of storage or transmission is perfectly secure, but we keep what leaves your device to the minimum the feature needs.</p>
 <h2>Changes to this policy</h2>
 <p>If TuneLab changes how it handles data, for example by adding a new online feature, we'll update this policy <em>before</em> that change ships. We'll also change the effective date above. When a change is significant, we'll also mention it in the app's release notes.</p>
 <h2>Contact</h2>
